@@ -88,17 +88,17 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 			//Cat Sector: fork ArkStation
 
 			if(INTERACTION_REQUIRE_SELF_MOUTH)
-                if(user.is_mouth_covered(ITEM_SLOT_MASK))
-                    return FALSE
+            	if(user.is_mouth_covered(ITEM_SLOT_MASK))
+					return FALSE
             if(INTERACTION_REQUIRE_TARGET_MOUTH)
-                if(target.is_mouth_covered(ITEM_SLOT_MASK))
-                    return FALSE
-            if(INTERACTION_REQUIRE_SELF_CHEST)
-                if(!get_location_accessible(user, BODY_ZONE_CHEST))
-                    return FALSE
-            if(INTERACTION_REQUIRE_TARGET_CHEST)
-                if(!get_location_accessible(target, BODY_ZONE_CHEST))
-                    return FALSE
+            	if(target.is_mouth_covered(ITEM_SLOT_MASK))
+            		return FALSE
+			if(INTERACTION_REQUIRE_SELF_CHEST)
+				if(!get_location_accessible(user, BODY_ZONE_CHEST))
+                	return FALSE
+			if(INTERACTION_REQUIRE_TARGET_CHEST)
+            	if(!get_location_accessible(target, BODY_ZONE_CHEST))
+					return FALSE
 
 			//Cat Sector: fork ArkStation
 
