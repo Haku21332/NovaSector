@@ -1,0 +1,5 @@
+author: "PaintedCat"
+delete-after: True
+changes:
+  - rscadd: "New sounds"
+  - rscadd: "New checks"
