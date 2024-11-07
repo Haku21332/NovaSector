@@ -302,15 +302,17 @@
 				soundloop3.stop()
 			. = TRUE
 		if("freq")
-			var/new_frequency = sanitize_frequency(unformat_frequency(params["freq"]), TRUE)
-			set_frequency(new_frequency)
-			name = initial(name) + " - freq: [frequency/10] code: [code]"
-			. = TRUE
+			var/value = unformat_frequency(params["freq"])
+			if(value)
+				frequency = sanitize_frequency(value, TRUE)
+				set_frequency(frequency)
+				. = TRUE
 		if("code")
-			code = text2num(params["code"])
-			code = round(code)
-			name = initial(name) + " - freq: [frequency/10] code: [code]"
-			. = TRUE
+			var/value = text2num(params["code"])
+			if(value)
+				value = round(value)
+				code = clamp(value, 1, 100)
+				. = TRUE
 		if("reset")
 			if(params["reset"] == "freq")
 				frequency = initial(frequency)

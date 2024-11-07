@@ -29,7 +29,6 @@
 					/obj/item/spanking_pad,
 					/obj/item/clothing/sextoy/vibrator,
 					/obj/item/restraints/handcuffs/lewd,
-					/obj/item/holosign_creator/privacy,
 
 					// Head / Mask /Neck Items
 					/obj/item/clothing/mask/ballgag,
